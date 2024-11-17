@@ -22,7 +22,6 @@ Each folder contains files that can be applied using simple software that alters
 
 I've included the traditional alterations (LMS shifting and Daltonization) for the three types of dichromatic colorblindness, as well as some alternative corrections that aim to preserve as much of the original rendering intent as possible while enhancing readability. The latter were developed unscientifically, by asking colorblind people *what actually worked the best for them.*
 
-***
 
 ## How do I use this repo?
 
@@ -30,15 +29,12 @@ I've included the traditional alterations (LMS shifting and Daltonization) for t
 
 That's it, you should be good to go. If the one that should nominally work for you isn't great, play around with the other options or better yet, contact me, and I'll do my best to make one that does. The linear gamma LUTs can be used to make new LUTs for your own display, or as an intermediate transform in creative environments as reference.
 
-***
 
 ## Testing Correction Effectiveness
 
 If you aren't sure what kind of colorblindness you have, or have any form of anomolous trichromacy, you can load up a LUT and cycle through the Ishihara test plates provided in "Ishihara Positive Plates" in the test images folder. Use the LUT that allows you to see the most plates clearly. The traditional corrections may make it harder to see plates you normally don't have issues with when no correction is applied. The negative test plates are provided for reference only.
 
 If multiple LUTs seem to work for you, or you don't want to sit through several slide shows to sus them out, try them on the color test patch image and pick the one you can easily differentiate the most squares on. 
-
-*** 
 
 ## Limitations/Known Issues
 Windows color management is in a pretty bad state right now, that's why I currently have to rely on third party software. I don't know that I'll be able to make it native on windows platforms for the forseeable future.
@@ -55,7 +51,6 @@ The traditional correction methods shift the entire color space according to som
 
 This project is also very early in development, so any input or collaboration is welcome. 
 
-***
 
 ## Upcoming Improvements/To-Do
 
