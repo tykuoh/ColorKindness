@@ -34,7 +34,7 @@ That's it, you should be good to go. If the one that should nominally work for y
 
 If you aren't sure what kind of colorblindness you have, or have any form of anomolous trichromacy, you can load up a LUT and cycle through the Ishihara test plates provided in "Ishihara Positive Plates" in the test images folder. Use the LUT that allows you to see the most plates clearly. The traditional corrections may make it harder to see plates you normally don't have issues with when no correction is applied. The negative test plates are provided for reference only.
 
-If multiple LUTs seem to work for you, or you don't want to sit through several slide shows to sus them out, try them on the color test patch image and pick the one you can easily differentiate the most squares on. 
+If multiple LUTs seem to work for you, or you don't want to sit through several slide shows to sus them out, try them on the colorblindness swatch image and the color test patch image and pick the one you can easily differentiate the most squares on. 
 
 ## Limitations/Known Issues
 Windows color management is in a pretty bad state right now, that's why I currently have to rely on third party software. I don't know that I'll be able to make it native on windows platforms for the forseeable future.
