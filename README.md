@@ -41,11 +41,11 @@ Windows color management is in a pretty bad state right now, that's why I curren
 
 Some fullscreen games/applications will override your color settings. You can try setting these to borderless windowed, or converting the provided luts to .png format and loading them using [ReShade](https://github.com/crosire/reshade). I'm working on finding a consistent way to translate them into Reshade's supported format, but for now that's something you'll have to figure out.
 
-The unscientific corrections work by shifting only the colors a person with anomolous trichromacy would have difficulty percieving into other ranges of the spectrum, compressing the full color gamut into a space they can see, while minimally altering the rest of the spectrum.
+The unscientific corrections work by shifting only the colors a person with anomolous trichromacy would have difficulty percieving into other ranges of the spectrum, compressing the full color gamut into a space they can see, while minimally altering the rest of the spectrum. These alterations were done directly in CIE XYZ space and transformed back into the output colorspace.
 
-This concept is much the same as proofing a print for perceptual rendering from a digital image, or using a colorspace transform or tone mapping to work with footage in color grading or compositing software. This helps overcome the limitations inherent to the traditional correction methods for people with anomolous trichromacy while retaining the full range of colors they can still percieve. This also means that **if you have completely dichromatic vision, the unscientific corrections may not work very well for you.**
+This concept is much the same as proofing a print for perceptual rendering from a digital image, or using a colorspace transform or tone mapping to work with footage in color grading or compositing software. This helps overcome the limitations inherent to the traditional correction methods for people with anomolous trichromacy while retaining the full range of colors they can still percieve. This also means that **if you have completely dichromatic vision, the unscientific corrections may not work as well for you.**
 
-In addition, I have no one that can help me test Tritanomaly/Tritanopia at present, so I've provided two versions of the correction luts, one that shifts more of the spectrum toward cyan/green, and one that shifts more of the spectrum into magenta/red. They are labelled GP (green push) and MP (magenta push) respectively. I'd love feedback on which of these works best. 
+In addition, I have no one that can help me test Tritanomaly/Tritanopia at present, so I've provided some trial correction luts using the same methodology. I'd love feedback on how well these work. 
 
 The traditional correction methods shift the entire color space according to someone's color insensitivity, or alter contrast and saturation in certain color ranges to achieve better readability. While these work fine for people who have completely dichromatic vision, they're extreme for people with anomolous trichromatic vision, and wildly alter the appearance of media in a way many people with reduced color perception find unpleasant. The unscientific LUTS try to strike a middle-ground that works for as many people as possible, but for people with the more severe types of colorblindness, they may be the only effective option.
 
@@ -54,7 +54,7 @@ This project is also very early in development, so any input or collaboration is
 
 ## Upcoming Improvements/To-Do
 
-+  **Wide gamut/HDR/SMPTE profiles** -- I can generate luts for these, but I don't have any displays to validate the profiles on. Get in touch if you do
++  **Wide gamut/HDR/SMPTE profiles** -- I can generate luts for these, but I don't have any displays or wide gamut calibration reference material to validate the profiles on. Get in touch if you do.
 +  **ReShade Native LUTs** -- working on this.
 +  **Corrections for monochromatic vision** -- This is a bit out of my depth, but if you have monochromatic vision and want to work with me on it, let me know.
 +  **Support for mobile platforms** -- honestly have no idea where to start with this, it looks pretty fraught.
